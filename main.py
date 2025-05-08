@@ -14,6 +14,8 @@ aluno01.acordar()"""
 cliente = ContaBanco("12354","Vitor","Corrente")
 
 cliente.ativarConta()
-cliente.depositar()
 cliente.verificarSaldo()
-cliente.sacar()
+cliente.depositar(200)
+cliente.verificarSaldo()
+cliente.sacar(200)
+cliente.verificarSaldo()

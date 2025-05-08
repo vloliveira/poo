@@ -77,30 +77,12 @@ class ContaBanco():
 
     def depositar(self, deposito):
         if self.status == True:
-            self.saldo = deposito
+            self.saldo += deposito
 
     def verificarSaldo(self):
         print(self.saldo)
 
-    def sacar (self):
-
-        #Aqui precisa reformular para saque negativado.
+    def sacar (self, saque):
 
         if self.status == True:
-            if self.saldo == 0:
-                print("Você não tem saldo na conta")
-            elif self.saldo < 0:
-                print("Você está negtivado")
-            else:
-                print("Quanto deseja sacar")
-
-
-
-
-
-
-
-
-
-
-
+            self.saldo -= saque
