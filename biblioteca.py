@@ -59,6 +59,7 @@ class Pessoa():
         else:
             print("Já está acordaro")
 
+#------------------------------------------------------------------
 
 class ContaBanco():
     def __init__(self, num, nome, tipo):
@@ -94,13 +95,117 @@ class ContaBanco():
             else:
                 print("Quanto deseja sacar")
 
+#------------------------------------------------------------------
 
+class Animal():
+    def __init__(self, nome, cor):
+        self.nome = nome
+        self.cor = cor
+    def comer(self):
+        print(f"{self.nome} {self.cor} foi comer...")
 
+class Gato(Animal):
+    def __init__(self, nome, cor):
+        super().__init__(nome, cor)
+    def miar(self):
+        print(f"O {self.nome} foi miando...")
 
+class Vaca(Animal):
+    def __init__(self, nome, cor):
+        super().__init__(nome, cor)
+    def mugir(self):
+        print(f"O {self.nome} foi mugindo...")
 
+class Cachorro(Animal):
+    def __init__(self, nome, cor):
+        super().__init__(nome, cor)
+    def latir(self):
+        print(f"O {self.nome} foi latindo...")
 
+class Coelho(Animal):
+    def __init__(self, nome, cor):
+        super().__init__(nome, cor)
+    def grunir(self):
+        print(f"O {self.nome} foi grunindo...")
 
+#------------------------------------------------------------------
 
+class Ingresso():
+    def __init__(self, valor):
+        self.valor = valor
+    def imprimeValor (self):
+        print(f"O valor do ingresso pista é: {self.valor}")
 
+class Vip(Ingresso):
+    def __init__(self, valor):
+        super().__init__(valor)
+        self.valor *= 1.5
+    def adicional(self):
+        print(f"O valor do ingresso VIP é de {self.valor}")
 
+#------------------------------------------------------------------
+
+class Forma():
+    def __init__(self):
+        self.area = 0
+        self.perimetro = 0
+
+class Retangulo(Forma):
+    def __init__(self):
+        super().__init__()
+        self.base = 0
+        self.altura = 0
+
+    def calcularArea(self, base, altura):
+        self.area = base * altura
+        print(self.area)
+
+    def calcularPerimetro(self, base, altura):
+        self.perimetro = 2*(base+altura)
+        print(self.perimetro)
+
+class Triangulo(Forma):
+    def __init__(self, area, perimetro):
+        super().__init__(area, perimetro)
+
+#------------------------------------------------------------------
+
+class Atleta():
+    def __init__(self):
+        self.aposentado = False
+        self.peso = 0
+    def aposentar (self):
+        self.aposentado = True
+        print("Se aposentou!")
+
+    def aquecer (self):
+        self.aquecer = True
+        print("Está se aquecendo!")
+
+class Corredor(Atleta):
+    def __init__(self):
+        super().__init__()
+        self.correndo = False
+    def correr(self):
+        if self.aposentado = False:
+            print("Não pode correr, está aposentado!")
+        self.correndo = True
+        print("Começou a correr!")
+class Nadador(Atleta):
+    def __init__(self):
+        super().__init__()
+        self.nadando = False
+    def nadar(self):
+        self.nadando = True
+        print("Começou a nadar!")
+class Ciclista(Atleta):
+    def __init__(self):
+        super().__init__()
+    def pedalar(self):
+        self.pedalando = True
+        print("Começou a pedalar!")
+
+"""class TriAtleta(Atleta, Corredor, Nadador, Ciclista):
+    def __init__(self):
+        super().__init__()"""
 
