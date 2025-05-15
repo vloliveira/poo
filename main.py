@@ -39,5 +39,20 @@ ingrtessoVip.adicional()"""
 areaRetangulo.calcularArea(3, 5)
 areaRetangulo.calcularPerimetro(3, 5)"""
 
-atleta01 = Atleta()
-atleta01.aposentar()
+
+atleta1 = Corredor()
+atleta1.aquecer()
+atleta1.correr()
+
+print("---")
+
+atleta1 = Nadador()
+atleta1.aquecer()
+atleta1.nadar()
+
+print("---")
+
+atleta3 = Ciclista()
+atleta3.aposentar()
+atleta3.aquecer()
+atleta3.pedalar()
